@@ -1,11 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Users - VK Enterprise</title>
-        <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    </head>
-    <body></body>
+<html>
+
+<head>
+    <title>Admin Dashboard</title>
+    <!-- include Bootstrap CSS and JS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
+    <!-- include custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/style.min.css">
+    <!-- include custom JavaScript -->
+    <style>
+        /* set the height of the header */
+header {
+    height: 50px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* style the logo */
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+/* set the height and width of the sidebar */
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background-color: #f7f7f7;
+    padding: 20px;
+    box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* style the links in the sidebar */
+.sidebar a {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* set the height of the main content area */
+.main {
+    height: 100%;
+    margin-left: 200px;
+    padding: 20px;
+}
+
+/* style the h1 tag in the main content area */
+.main h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* style the notification button in the header */
+.notification {
+    background-color: #007bff;
+    border: none;
+}
+
+/* style the search bar and buttons in the main content area */
+.main input[type="text"] {
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.main button {
+    margin-left: 10px;
+}
+
+/* style the table */
+.table {
+    margin-top: 20px;
+}
+
+/* style the table headers */
+.table th {
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+/* style the table data */
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+    </style>
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <img src="logo.png" alt="logo" class="logo">
+        <button class="btn btn-primary notification">Notifications</button>
+    </header>
+    <!-- sidebar section -->
+    <div class="sidebar">
+        <a href="#">Dashboard</a>
+        <a href="#">Retailer</a>
+        <a href="#">Wholesaler</a>
+        <a href="#">Pending</a>
+        <a href="#">Reports</a>
+    </div>
+    <!-- main content section -->
+    <div class="main">
+        <h1>Users</h1>
+        <p>Welcome to the users dashboard.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="btn-group float-right mr-2" role="group" aria-label="SortBy">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            SortBy
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Name</a>
+                            <a class="dropdown-item" href="#">Price</a>
+                            <a class="dropdown-item" href="#">Rating</a>
+                        </div>
+                    </div>
+                    <div class="btn-group float-right" role="group" aria-label="Retailer Wholesaler Pending">
+                        <button type="button" class="btn btn-secondary">Retailer</button>
+                        <button type="button" class="btn btn-secondary">Wholesaler</button>
+                        <button type="button" class="btn btn-secondary">Pending</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">SL.no</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Due</th>
+                    <th scope="col">Verification Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>example1@example.com</td>
+                    <td>Free</td>
+                    <td>N/A</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Actions">
+                            <button type="button" class="btn btn-primary mr-2">Retailer</button>
+                            <button type="button" class="btn btn-primary mr-2">Wholesaler</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>example2@example.com</td>
+                    <td>Retailer</td>
+                    <td>2023-06-30</td>
+                    <td>Verified</td>
+                </tr>
+                <!-- add more rows as needed -->
+            </tbody>
+        </table>
+
+    </div>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+
+
 </html>
